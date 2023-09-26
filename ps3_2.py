@@ -71,7 +71,7 @@ def get_word_score(word,n):
     word_length=0
     primer_componente=0
     for letter in (word):
-        primer_componente+=SCRABBLE_LETTER_VALUES[letter]
+        primer_componente+=SCRABBLE_LETTER_VALUES.get(letter)
         word_length+=1
     if 1 < (7*word_length-3*(n-word_length)):
         segundo_componente=7*word_length-3*(n-word_length)
